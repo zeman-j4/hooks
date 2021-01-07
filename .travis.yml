@@ -7,10 +7,6 @@ install:
   - npm install -g surge
 script:
   - npm run build:doc
-  - surge ./dist ahooks-$(git rev-parse --short HEAD).surge.sh
-cache:
-  directories:
-    - 'node_modules'
 dx-scan:
   stage: build
   image: dxheroes/dx-scanner:latest
