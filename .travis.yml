@@ -11,3 +11,8 @@ script:
 cache:
   directories:
     - 'node_modules'
+dx-scan:
+  stage: build
+  image: dxheroes/dx-scanner:latest
+  script:
+    - dx-scanner run --ci
